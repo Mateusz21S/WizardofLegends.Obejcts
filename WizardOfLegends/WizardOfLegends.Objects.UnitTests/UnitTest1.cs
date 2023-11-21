@@ -1,11 +1,7 @@
-namespace WizardOfLegends.Objects.UnitTests
+namespace WizardOfLegends.Objects
 {
-    public class UnitTest1
+    public class Class1
     {
-        [Fact]
-        public void Test1()
-        {
 
-        }
     }
 }
