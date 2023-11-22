@@ -1,8 +1,9 @@
-﻿namespace ConsoleApp4.Obiekty.Weapons;
+﻿namespace WizardOfLegends.Objects.Weapons;
 
 
 
-public interface IWeapon{
+public interface IWeapon
+{
     string Name { get; }
     int Durability { get; }
     bool IsBroken();

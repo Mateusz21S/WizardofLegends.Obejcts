@@ -1,8 +1,7 @@
-﻿using System.Globalization;
+﻿namespace WizardOfLegends.Objects.Spells;
 
-namespace ConsoleApp4.Obiekty.Spells;
-
-public interface ISpell{
+public interface ISpell
+{
     string Name { get; }
     int Power { get; }
     int ManaCost { get; }

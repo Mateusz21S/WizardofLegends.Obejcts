@@ -1,11 +1,4 @@
-using ConsoleApp4.Obiekty.Spells;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp4.Assests.Spells;
+namespace WizardOfLegends.Objects.Spells;
 public class MagicArrowSpell : ISpell
 {
     public string Name { get; }

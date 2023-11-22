@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WizardOfLegends.Objects\WizardOfLegends.Objects.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp4.Obiekty.Weapons;
+﻿namespace WizardOfLegends.Objects.Weapons;
 
 public class SwordWeapon : IWeapon
 {

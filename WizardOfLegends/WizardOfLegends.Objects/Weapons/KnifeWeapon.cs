@@ -1,11 +1,4 @@
-using ConsoleApp4.Obiekty.Weapons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp4.Assests.Weapons;
+namespace WizardOfLegends.Objects.Weapons;
 public class KnifeWeapon : IWeapon
 {
     public int Damage { get; } = 1;

@@ -1,18 +1,11 @@
-using ConsoleApp4.Obiekty.Spells;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp4.Assests.Spells;
-public class ProfessionalSpellBook : ISpellBook
+namespace WizardOfLegends.Objects.Spells;
+public class ExpertSpellBook : ISpellBook
 {
-    public string Name { get; } = "Professional Spell Book";
-    public int SpellCount { get; private set; } = 5;
+    public string Name { get; } = "Expert Spell Book";
+    public int SpellCount { get; private set; } = 8;
     public List<ISpell> Spells { get; }
 
-    public ProfessionalSpellBook()
+    public ExpertSpellBook()
     {
         Spells = new List<ISpell>();
     }
@@ -30,11 +23,13 @@ public class ProfessionalSpellBook : ISpellBook
         Console.WriteLine($"{spell.Name} added to {Name} spell book.");
     }
 
-    public bool HasSpell(string name) {
+    public bool HasSpell(string name)
+    {
         throw new NotImplementedException();
     }
 
-    public int CastSpell(string name, int rnd) {
+    public int CastSpell(string name, int rnd)
+    {
         throw new NotImplementedException();
     }
 

@@ -1,6 +1,4 @@
-using ConsoleApp4.Obiekty.Weapons;
-
-namespace ConsoleApp4.Assests.Weapons;
+namespace WizardOfLegends.Objects.Weapons;
 public class PistolWeapon : IWeapon
 {
     public int Damage { get; } = 25;

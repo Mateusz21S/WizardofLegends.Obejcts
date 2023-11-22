@@ -1,12 +1,11 @@
-﻿namespace ConsoleApp4.Obiekty.Spells;
-
-public class SimpleSpellBook : ISpellBook
+namespace WizardOfLegends.Objects.Spells;
+public class ProfessionalSpellBook : ISpellBook
 {
-    public string Name { get; } = "Simple Spell Book";
-    public int SpellCount { get; private set; } = 2;
+    public string Name { get; } = "Professional Spell Book";
+    public int SpellCount { get; private set; } = 5;
     public List<ISpell> Spells { get; }
 
-    public SimpleSpellBook()
+    public ProfessionalSpellBook()
     {
         Spells = new List<ISpell>();
     }
@@ -24,24 +23,20 @@ public class SimpleSpellBook : ISpellBook
         Console.WriteLine($"{spell.Name} added to {Name} spell book.");
     }
 
-    public bool HasSpell(string name) {
+    public bool HasSpell(string name)
+    {
         throw new NotImplementedException();
     }
-
-    public void RemoveSpell(ISpell spell) {
-        Spells.Remove(spell);
-    }
-
 
     public int CastSpell(string name, int rnd)
     {
-       
-    {
         throw new NotImplementedException();
     }
 
-     
-}
+    public void RemoveSpell(ISpell spell)
+    {
+        Spells.Remove(spell);
+    }
 
     public int CastSpell(int rnd)
     {

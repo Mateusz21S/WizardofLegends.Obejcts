@@ -1,10 +1,11 @@
-﻿namespace ConsoleApp4.Obiekty.Weapons;
+﻿namespace WizardOfLegends.Objects.Weapons;
 
-public class FistWeapon : IWeapon{
+public class FistWeapon : IWeapon
+{
     public int Damage { get; } = 1;
     public string Name { get; }
     public int Durability { get; } = 100;
-    
+
     public FistWeapon()
     {
         Name = "Fist";
@@ -15,7 +16,7 @@ public class FistWeapon : IWeapon{
         return Durability <= 0;
     }
 
-    public  int Hit(int random)
+    public int Hit(int random)
     {
         return Damage + random;
     }

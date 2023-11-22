@@ -1,6 +1,7 @@
-﻿namespace ConsoleApp4.Obiekty.Spells;
+﻿namespace WizardOfLegends.Objects.Spells;
 
-public interface ISpellBook{
+public interface ISpellBook
+{
     string Name { get; }
     int SpellCount { get; }
 
