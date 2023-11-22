@@ -1,9 +1,11 @@
+
 namespace WizardOfLegends.Objects.Spells;
 public class LightningSpell : ISpell
 {
     public string Name { get; }
     public int Power { get; }
     public int ManaCost { get; }
+    public object MagicDamage { get; set; }
 
     public LightningSpell()
     {

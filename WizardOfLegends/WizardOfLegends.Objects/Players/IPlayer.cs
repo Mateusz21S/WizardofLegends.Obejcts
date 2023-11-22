@@ -12,6 +12,7 @@ public interface IPlayer
     public int MaxMana { get; }
     public int Mana { get; set; }
     public IWeapon Weapon { get; set; }
+    public ISpell Spell { get; set; }
 
     public ISpellBook SpellBook { get; set; }
 

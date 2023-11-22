@@ -1,10 +1,13 @@
-﻿namespace WizardOfLegends.Objects.Spells;
+﻿
+namespace WizardOfLegends.Objects.Spells;
 
 public class FireBallSpell : ISpell
 {
     public string Name { get; }
     public int Power { get; }
     public int ManaCost { get; }
+    public IEnumerable<object> MagicDamage { get; set; }
+    public static int MaxDamage { get; set; }
 
     public FireBallSpell()
     {

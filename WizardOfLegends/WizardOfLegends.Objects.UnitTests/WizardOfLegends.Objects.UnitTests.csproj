@@ -26,4 +26,8 @@
     <ProjectReference Include="..\WizardOfLegends.Objects\WizardOfLegends.Objects.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="PlayersTests\" />
+  </ItemGroup>
+
 </Project>
