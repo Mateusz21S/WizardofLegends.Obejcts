@@ -3,7 +3,8 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players;
 
-public interface IPlayer{ 
+public interface IPlayer
+{
     Guid Id { get; set; }
     string Name { get; set; }
     int MaxHealth { get; }

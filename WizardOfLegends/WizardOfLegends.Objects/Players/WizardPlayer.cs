@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Spells;
 using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players
@@ -24,7 +19,7 @@ namespace WizardOfLegends.Objects.Players
         public int MaxMana => 50;
 
         public int Mana { get; set; } = 5;
-        public IWeapon Weapon { get; set; } = new FistWeapon();
+        public IWeapon Weapon { get; set; } = new SwordWeapon();
         public ISpellBook SpellBook { get; set; }
 
         public int AddDamage(int damage)
@@ -32,7 +27,9 @@ namespace WizardOfLegends.Objects.Players
             throw new NotImplementedException();
         }
 
-        public int MagicAttack()
+        public int MagicAttack(string spellName)
+
+
         {
             throw new NotImplementedException();
         }

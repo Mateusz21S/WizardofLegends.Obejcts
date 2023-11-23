@@ -1,8 +1,9 @@
 ﻿using WizardOfLegends.Objects.Spells;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Players{ 
-    public class WizardPlayer : IPlayer{ 
+namespace WizardOfLegends.Objects.Players{
+    public class WizardPlayer : IPlayer
+    {
         public Guid Id { get; set; }
         public string Name { get; set; }
 
@@ -24,7 +25,12 @@ namespace WizardOfLegends.Objects.Players{
             throw new NotImplementedException();
         }
 
-        public int MagicAttack() {
+        public int MagicAttack() { 
+            throw new NotImplementedException();
+        }
+
+        public int MagicAttack(string spellName)
+        {
             throw new NotImplementedException();
         }
 
