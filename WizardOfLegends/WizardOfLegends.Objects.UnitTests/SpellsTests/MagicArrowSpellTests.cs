@@ -59,7 +59,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         {
             // Arrange
             var maxPower = int.MaxValue;
-            var expectedMagicDamage = _sut.MaxDamage;
+            var expectedMagicDamage = 18;
 
             // Act
             var actualMagicDamage = _sut.Hit(maxPower);

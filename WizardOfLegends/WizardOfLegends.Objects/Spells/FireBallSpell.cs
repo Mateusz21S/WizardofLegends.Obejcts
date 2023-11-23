@@ -11,7 +11,7 @@ public class FireBallSpell : ISpell
 
     public FireBallSpell()
     {
-        Name = "Fireball base";
+        Name = "Fireball Base";
         Power = 10;
         ManaCost = 10;
     }

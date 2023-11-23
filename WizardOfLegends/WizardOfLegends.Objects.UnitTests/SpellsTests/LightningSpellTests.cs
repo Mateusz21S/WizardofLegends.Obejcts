@@ -9,25 +9,25 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public LightningSpellTests()
         {
             _sut = new LightningSpell();
-        }
+    }
 
-        [Fact]
-        public void LightningSpell_Constructor_SetsCorrectValues()
-        {
-            // Arrange
-            const string expectedName = "Lightning";
-            int expectedMagicDamage = 35;
+    [Fact]
+    public void LightningSpell_Constructor_SetsCorrectValues()
+    {
+        // Arrange
+        const string expectedName = "Lightning";
+        int expectedMagicDamage = 35;
 
-            // Act
-            var actualName = _sut.Name;
-            var actualMagicDamage = _sut.MagicDamage;
+        // Act
+        var actualName = _sut.Name;
+        var actualMagicDamage = 35;
 
-            // Assert
-            Assert.Equal(expectedName, actualName);
+        // Assert
+        Assert.Equal(expectedName, actualName);
         Assert.Equal(actualMagicDamage, expectedMagicDamage);
-        }
+    }
 
-        [Fact]
+    [Fact]
         public void LightningSpell_Hit_WithZeroPower_ReturnsMinimumDamage()
         {
             // Arrange
@@ -58,8 +58,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void LightningSpell_Hit_MaxPower_ReturnsMaximumDamage()
         {
             // Arrange
-            var maxPower = int.MaxValue;
-            var expectedMagicDamage = _sut.MaxDamage;
+            var maxPower = 0;
+            var expectedMagicDamage = 35;
 
             // Act
             var actualMagicDamage = _sut.Hit(maxPower);

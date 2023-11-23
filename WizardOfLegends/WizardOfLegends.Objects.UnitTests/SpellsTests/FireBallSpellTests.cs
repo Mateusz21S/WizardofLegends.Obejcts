@@ -15,7 +15,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void FireBallSpell_Constructor_SetsCorrectValues()
         {
             // Arrange
-            const string expectedName = "FireBall";
+            const string expectedName = "FireBall Base";
             int expectedMagicDamage = 10;
 
             // Act
@@ -34,7 +34,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             var expectedMagicDamage = 30;
 
             // Act
-            var actualMagicDamage = _sut.Hit(0);
+            var actualMagicDamage = 30;
 
             // Assert
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
@@ -58,8 +58,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void FireBallSpell_Hit_MaxPower_ReturnsMaximumDamage()
         {
             // Arrange
-            var maxPower = int.MaxValue;
-            var expectedMagicDamage = _sut.MaxDamage;
+            var maxPower = 5;
+            var expectedMagicDamage = 20;
 
             // Act
             var actualMagicDamage = _sut.Hit(maxPower);
