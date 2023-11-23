@@ -1,7 +1,7 @@
 ﻿using WizardOfLegends.Objects.Spells;
 
-namespace WizardOfLegends.Objects.UnitTests.SpellsTests
-{
+namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
+
     public class FireBallSpellTests
     {
         private readonly FireBallSpell _sut;
@@ -24,7 +24,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
 
             // Assert
             Assert.Equal(expectedName, actualName);
-            Assert.Equal(expectedMagicDamage);
+            Assert.Equal(actualMagicDamage, expectedMagicDamage);
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
         {
             // Arrange
             var maxPower = int.MaxValue;
-            var expectedMagicDamage = FireBallSpell.MaxDamage;
+            var expectedMagicDamage = _sut.MaxDamage;
 
             // Act
             var actualMagicDamage = _sut.Hit(maxPower);
@@ -68,6 +68,5 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
         }
     }
-}
 
 

@@ -3,39 +3,32 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players;
 
-public interface IPlayer
-{
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public int MaxHealth { get; }
-    public int Health { get; set; }
-    public int MaxMana { get; }
-    public int Mana { get; set; }
-    public IWeapon Weapon { get; set; }
-    public ISpell Spell { get; set; }
-
+public interface IPlayer{
+    Guid Id { get; set; }
+    string Name { get; set; }
+    int MaxHealth { get; }
+    int Health { get; set; }
+    int MaxMana { get; }
+    int Mana { get; set; }
+    IWeapon Weapon { get; set; }
     public ISpellBook SpellBook { get; set; }
 
     /// <summary>
-    /// ta metoda odejmuje zdrowie graczowi
+    ///     ta metoda odejmuje zdrowie graczowi
     /// </summary>
     /// <param name="damage"></param>
     /// <returns>zwraca pozostałą ilość życia</returns>
     public int AddDamage(int damage);
 
     /// <summary>
-    /// ta metoda zadaje obrażenia fizyczne
+    ///     ta metoda zadaje obrażenia fizyczne
     /// </summary>
     /// <returns></returns>
     public int PisicalAttack();
 
     /// <summary>
-    /// ta metoda zadaje obrażenia magiczne
+    ///     ta metoda zadaje obrażenia magiczne
     /// </summary>
     /// <returns></returns>
-    public int MagicAttack();
-
-
-
-
+    public int MagicAttack(string spellName);
 }

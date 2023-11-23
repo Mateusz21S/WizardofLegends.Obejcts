@@ -11,8 +11,8 @@ namespace WizardOfLegends.Objects.Players
     public class AssassinPlayer : IPlayer
 
     {
-        public Guid Id { get; set => throw new NotImplementedException(); }
-        public string Name { get; set => throw new NotImplementedException(); }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
 
         public int MaxHealth => throw new NotImplementedException();
 
@@ -29,7 +29,7 @@ namespace WizardOfLegends.Objects.Players
             throw new NotImplementedException();
         }
 
-        public int MagicAttack()
+        public int MagicAttack(string spellName)
         {
             throw new NotImplementedException();
         }
