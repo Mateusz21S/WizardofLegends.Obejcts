@@ -1,8 +1,8 @@
 ﻿using WizardOfLegends.Objects.Spells;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Players{
-    public class WarriorPlayer : IPlayer{
+namespace WizardOfLegends.Objects.Players{ 
+    public class WizardPlayer : IPlayer{ 
         public Guid Id { get; set; }
         public string Name { get; set; }
 
@@ -28,7 +28,7 @@ namespace WizardOfLegends.Objects.Players{
             throw new NotImplementedException();
         }
 
-        public int PisicalAttack() {
+        public int PhysicalAttack() {
             throw new NotImplementedException();
         }
     }

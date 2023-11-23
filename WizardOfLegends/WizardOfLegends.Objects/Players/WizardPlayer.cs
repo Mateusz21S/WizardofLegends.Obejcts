@@ -8,20 +8,23 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players
 {
-    public class WizardPlayer : IPlayer
-
+    public class WarriorPlayer : IPlayer
     {
-        public Guid Id { get; set => throw new NotImplementedException(); }
-        public string Name { get; set => throw new NotImplementedException(); }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
 
         public int MaxHealth => throw new NotImplementedException();
 
-        public int Health { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Health
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public int MaxMana => 50;
 
-        public int Mana { get; set; } = 20;
-        public ISpeel Speel { get; set; } = new SimpleSpellBook();
+        public int Mana { get; set; } = 5;
+        public IWeapon Weapon { get; set; } = new FistWeapon();
         public ISpellBook SpellBook { get; set; }
 
         public int AddDamage(int damage)
@@ -34,11 +37,11 @@ namespace WizardOfLegends.Objects.Players
             throw new NotImplementedException();
         }
 
-        public int PisicalAttack()
+        public int PhysicalAttack()
         {
             throw new NotImplementedException();
         }
-
     }
 }
+
 

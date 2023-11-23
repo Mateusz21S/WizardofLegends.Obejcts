@@ -4,6 +4,8 @@ public class MagicArrowSpell : ISpell
     public string Name { get; }
     public int Power { get; }
     public int ManaCost { get; }
+    public int MagicDamage { get; set; }
+    public int MaxDamage { get; set; }
 
     public MagicArrowSpell()
     {

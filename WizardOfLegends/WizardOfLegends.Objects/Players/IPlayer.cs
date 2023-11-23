@@ -3,7 +3,7 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players;
 
-public interface IPlayer{
+public interface IPlayer{ 
     Guid Id { get; set; }
     string Name { get; set; }
     int MaxHealth { get; }
@@ -24,7 +24,7 @@ public interface IPlayer{
     ///     ta metoda zadaje obrażenia fizyczne
     /// </summary>
     /// <returns></returns>
-    public int PisicalAttack();
+    public int PhysicalAttack();
 
     /// <summary>
     ///     ta metoda zadaje obrażenia magiczne

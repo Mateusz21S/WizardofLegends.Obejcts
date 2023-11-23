@@ -44,8 +44,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void FireBallSpell_Hit_WithPositivePower_ReturnsScaledDamage()
         {
             // Arrange
-            var power = 5;
-            var expectedMagicDamage = 5;
+            var power = 10;
+            var expectedMagicDamage = 10;
 
             // Act
             var actualMagicDamage = _sut.Hit(power);
@@ -68,5 +68,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
         }
     }
+
+
+
 
 

@@ -1,7 +1,7 @@
 ﻿using WizardOfLegends.Objects.Spells;
 
-namespace WizardOfLegends.Objects.UnitTests.SpellsTests
-{
+namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
+
     public class LightningSpellTests
     {
         private readonly LightningSpell _sut;
@@ -24,7 +24,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
 
             // Assert
             Assert.Equal(expectedName, actualName);
-            Assert.Equal(expectedMagicDamage);
+            Assert.Equal(actualMagicDamage, expectedMagicDamage);
         }
 
         [Fact]
@@ -44,7 +44,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
         public void LightningSpell_Hit_WithPositivePower_ReturnsScaledDamage()
         {
             // Arrange
-            var power = 35;
+            var power = 30;
             var expectedMagicDamage = 35;
 
             // Act
@@ -55,11 +55,11 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
         }
 
         [Fact]
-        public void LIghtningSpell_Hit_MaxPower_ReturnsMaximumDamage()
+        public void LightningSpell_Hit_MaxPower_ReturnsMaximumDamage()
         {
             // Arrange
             var maxPower = int.MaxValue;
-            var expectedMagicDamage = LightningSpell.MaxDamage;
+            var expectedMagicDamage = _sut.MaxDamage;
 
             // Act
             var actualMagicDamage = _sut.Hit(maxPower);
@@ -68,5 +68,5 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
         }
     }
-}
+
 

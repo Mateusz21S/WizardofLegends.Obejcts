@@ -6,6 +6,7 @@ public class LightningSpell : ISpell
     public int Power { get; }
     public int ManaCost { get; }
     public object MagicDamage { get; set; }
+    public int MaxDamage { get; set; }
 
     public LightningSpell()
     {
