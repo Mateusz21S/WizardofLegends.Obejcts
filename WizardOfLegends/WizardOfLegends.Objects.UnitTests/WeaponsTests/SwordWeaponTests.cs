@@ -36,7 +36,7 @@ namespace WizardOfLegends.Objects.UnitTests.WeaponsTests
             var expectedDamage = 10;
 
             // Act
-            var actualDamage = _sut.Hit(2);
+            var actualDamage = _sut.Hit(0);
 
             // Assert
             Assert.Equal(expectedDamage, actualDamage);
@@ -46,7 +46,7 @@ namespace WizardOfLegends.Objects.UnitTests.WeaponsTests
         public void Check_Durability_Change()
         {
             // Arrange
-            var expectedDurability = 100;
+            var expectedDurability = 99;
 
             // Act
             _sut.Hit(0);

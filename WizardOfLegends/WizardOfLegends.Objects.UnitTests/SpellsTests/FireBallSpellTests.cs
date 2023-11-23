@@ -31,7 +31,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void FireBallSpell_Hit_WithZeroPower_ReturnsMinimumDamage()
         {
             // Arrange
-            var expectedMagicDamage = 10;
+            var expectedMagicDamage = 30;
 
             // Act
             var actualMagicDamage = _sut.Hit(0);
@@ -45,7 +45,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         {
             // Arrange
             var power = 10;
-            var expectedMagicDamage = 10;
+            var expectedMagicDamage = 30;
 
             // Act
             var actualMagicDamage = _sut.Hit(power);

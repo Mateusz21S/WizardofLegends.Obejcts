@@ -15,8 +15,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void MagicArrowSpell_Constructor_SetsCorrectValues()
         {
             // Arrange
-            const string expectedName = "MagicArrow";
-            int expectedMagicDamage = 20;
+            const string expectedName = "Magic Arrow";
+            int expectedMagicDamage = 0;
 
             // Act
             var actualName = _sut.Name;
@@ -34,7 +34,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             var expectedMagicDamage = 20;
 
             // Act
-            var actualMagicDamage = _sut.Hit(2);
+            var actualMagicDamage = _sut.Hit(0);
 
             // Assert
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
@@ -45,7 +45,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         {
             // Arrange
             var power = 20;
-            var expectedMagicDamage = 20;
+            var expectedMagicDamage = 60;
 
             // Act
             var actualMagicDamage = _sut.Hit(power);

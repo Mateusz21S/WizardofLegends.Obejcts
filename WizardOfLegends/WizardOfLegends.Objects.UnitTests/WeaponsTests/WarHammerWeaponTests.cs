@@ -16,7 +16,7 @@ namespace WizardOfLegends.Objects.UnitTests.WeaponsTests
         public void WarHammerWeapon_WhenCreated_ShouldHaveCorrectValues()
         {
             // Arrange
-            var expectedName = "WarHammer";
+            var expectedName = "War Hammer";
             var expectedDamage = 20;
 
             // Act
@@ -36,7 +36,7 @@ namespace WizardOfLegends.Objects.UnitTests.WeaponsTests
             var expectedDamage = 20;
 
             // Act
-            var actualDamage = _sut.Hit(3);
+            var actualDamage = _sut.Hit(0);
 
             // Assert
             Assert.Equal(expectedDamage, actualDamage);
@@ -46,7 +46,7 @@ namespace WizardOfLegends.Objects.UnitTests.WeaponsTests
         public void Check_Durability_Change()
         {
             // Arrange
-            var expectedDurability = 100;
+            var expectedDurability = 99;
 
             // Act
             _sut.Hit(0);

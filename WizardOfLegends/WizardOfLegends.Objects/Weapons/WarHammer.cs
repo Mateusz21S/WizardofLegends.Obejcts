@@ -21,7 +21,7 @@ public class WarHammerWeapon : IWeapon
         if (IsBroken()) return 0;
 
         Durability -= 1;
-        return Damage + random * 3;
+        return Damage + random * 2;
     }
 
     public void PrintInfo()

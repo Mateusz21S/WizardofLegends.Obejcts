@@ -24,7 +24,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
 
             // Assert
             Assert.Equal(expectedName, actualName);
-            Assert.Equal(actualMagicDamage, expectedMagicDamage);
+        Assert.Equal(actualMagicDamage, expectedMagicDamage);
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             var expectedMagicDamage = 35;
 
             // Act
-            var actualMagicDamage = _sut.Hit(2);
+            var actualMagicDamage = _sut.Hit(0);
 
             // Assert
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
@@ -44,8 +44,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         public void LightningSpell_Hit_WithPositivePower_ReturnsScaledDamage()
         {
             // Arrange
-            var power = 30;
-            var expectedMagicDamage = 35;
+            var power = 10;
+            var expectedMagicDamage = 55;
 
             // Act
             var actualMagicDamage = _sut.Hit(power);

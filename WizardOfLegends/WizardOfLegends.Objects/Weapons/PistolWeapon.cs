@@ -3,7 +3,7 @@ public class PistolWeapon : IWeapon
 {
     public int Damage { get; } = 25;
     public string Name { get; }
-    public int Durability { get; } = 100;
+    public int Durability { get; } = 120;
 
     public PistolWeapon()
     {
