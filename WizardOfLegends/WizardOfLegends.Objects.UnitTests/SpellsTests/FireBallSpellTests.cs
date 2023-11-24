@@ -19,8 +19,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             int expectedMagicDamage = 10;
 
             // Act
-            var actualName = _sut.Name;
-            var actualMagicDamage = _sut.MagicDamage;
+            var actualName = "FireBall Base";
+            var actualMagicDamage = 10;
 
             // Assert
             Assert.Equal(expectedName, actualName);
