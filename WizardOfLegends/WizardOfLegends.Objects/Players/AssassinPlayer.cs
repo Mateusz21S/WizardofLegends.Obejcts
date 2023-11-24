@@ -28,8 +28,6 @@ namespace WizardOfLegends.Objects.Players{
         }
 
         public int MagicAttack(string spellName)
-
-
         {
             throw new NotImplementedException();
         }

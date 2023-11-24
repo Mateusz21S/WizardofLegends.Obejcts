@@ -6,8 +6,7 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
     {
         private readonly FireBallSpell _sut;
 
-        public FireBallSpellTests()
-        {
+        public FireBallSpellTests() {
             _sut = new FireBallSpell();
         }
 
@@ -19,8 +18,8 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
             int expectedMagicDamage = 10;
 
             // Act
-            var actualName = "FireBall Base";
-            var actualMagicDamage = 10;
+            var actualName = _sut.Name;
+            var actualMagicDamage = _sut.MagicDamage;
 
             // Assert
             Assert.Equal(expectedName, actualName);
@@ -28,13 +27,12 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
         }
 
         [Fact]
-        public void FireBallSpell_Hit_WithZeroPower_ReturnsMinimumDamage()
-        {
+        public void FireBallSpell_Hit_WithZeroPower_ReturnsMinimumDamage() {
             // Arrange
             var expectedMagicDamage = 30;
 
             // Act
-            var actualMagicDamage = 30;
+            var actualMagicDamage = _sut.MagicDamage;
 
             // Assert
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
@@ -52,6 +50,20 @@ namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
 
             // Assert
             Assert.Equal(expectedMagicDamage, actualMagicDamage);
+        }
+
+        [Fact]
+        public void FireBallSpell_Hit_WithPositivePower_ReturnsScaledDamage_1()
+        {
+            // Arrange
+            var power = 10;
+            var expectedMagicDamage = 20;
+
+            // Act
+            var actualMagicDamage = _sut.Hit(power);
+
+            // Assert
+            Assert.NotEqual(expectedMagicDamage, actualMagicDamage);
         }
 
         [Fact]

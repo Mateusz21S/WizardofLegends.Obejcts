@@ -6,12 +6,12 @@ public class FireBallSpell : ISpell
     public string Name { get; }
     public int Power { get; }
     public int ManaCost { get; }
-    public int MagicDamage { get; set; }
+    public int MagicDamage { get; set; } = 10;
     public int MaxDamage { get; set; }
 
     public FireBallSpell()
     {
-        Name = "Fireball Base";
+        Name = "FireBall Base";
         Power = 10;
         ManaCost = 10;
     }

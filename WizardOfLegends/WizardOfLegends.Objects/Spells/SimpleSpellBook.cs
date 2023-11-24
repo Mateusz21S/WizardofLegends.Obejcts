@@ -38,9 +38,9 @@ public class SimpleSpellBook : ISpellBook
     public int CastSpell(string name, int rnd)
     {
 
-        {
+     
             throw new NotImplementedException();
-        }
+     
 
 
     }
