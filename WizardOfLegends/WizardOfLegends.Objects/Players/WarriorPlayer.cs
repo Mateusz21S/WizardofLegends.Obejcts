@@ -7,13 +7,14 @@ namespace WizardOfLegends.Objects.Players{
         public Guid Id { get; set; }
         public string Name { get; set; }
 
-        public int MaxHealth => throw new NotImplementedException();
+        public int MaxHealth => 100;
 
+        private int _health;
         public int Health
-            {
-                get => throw new NotImplementedException();
-                set => throw new NotImplementedException();
-            }
+        {
+            get => _health;
+            set => _health = 100;
+        }
 
         public int MaxMana => 20;
 
