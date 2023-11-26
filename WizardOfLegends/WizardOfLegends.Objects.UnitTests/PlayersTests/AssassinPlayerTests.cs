@@ -7,19 +7,20 @@ using WizardOfLegends.Objects.Players;
 
 namespace WizardOfLegends.Objects.UnitTests.PlayersTests
 {
-    public class WarriorPlayerTests
+    public class AssassinPlayerTests
     {
-        private WarriorPlayer _sut;
+        private AssassinPlayer _sut;
 
-        public WarriorPlayerTests()
+        public AssassinPlayerTests()
         {
-            _sut = new WarriorPlayer();
+            _sut = new AssassinPlayer();
         }
 
         [Fact]
-        public void Add_Dmg_Should_Lower_Health() {
+        public void AddDamage_ValidDamage_ReducedHealth()
+        {
             // Arrange
-            var expectedHealth = 99;
+            var expectedHealth = 99; 
 
             // Act
             _sut.AddDamage(1);

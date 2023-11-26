@@ -21,21 +21,51 @@ namespace WizardOfLegends.Objects.Players{
         public IWeapon Weapon { get; set; } = new FistWeapon();
         public ISpellBook SpellBook { get; set; }
 
-        public int AddDamage(int damage) {
-            throw new NotImplementedException();
-        }
+        public int AddDamage(int damage)
+        {
+            if (damage < 0)
+            {
+                throw new ArgumentException("Damage value cannot be negative.", nameof(damage));
+            }
 
-        public int MagicAttack() { 
-            throw new NotImplementedException();
-        }
+            Health -= damage;
 
+            if (Health < 0)
+            {
+                Health = 0;
+            }
+
+            return Health;
+        }
         public int MagicAttack(string spellName)
         {
-            throw new NotImplementedException();
+            int damage = CalculateMagicDamage(spellName);
+
+            if (damage > Mana)
+            {
+                throw new InvalidOperationException("Not enough mana to perform the magic attack.");
+            }
+
+            Mana -= damage;
+
+            return damage;
         }
 
-        public int PhysicalAttack() {
-            throw new NotImplementedException();
+        private int CalculateMagicDamage(string spellName)
+        {
+            return 10;
+        }
+
+        public int PhysicalAttack()
+        {
+            int damage = CalculatePhysicalDamage();
+
+            return damage;
+        }
+
+        private int CalculatePhysicalDamage()
+        {
+            return 15;
         }
     }
 }

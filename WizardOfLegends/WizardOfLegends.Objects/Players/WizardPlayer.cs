@@ -24,19 +24,49 @@ namespace WizardOfLegends.Objects.Players
 
         public int AddDamage(int damage)
         {
-            throw new NotImplementedException();
+            if (damage < 0)
+            {
+                throw new ArgumentException("Damage value cannot be negative.", nameof(damage));
+            }
+
+            Health -= damage;
+
+            if (Health < 0)
+            {
+                Health = 0;
+            }
+
+            return Health;
+        }
+        public int MagicAttack(string spellName)
+        {
+            int damage = CalculateMagicDamage(spellName);
+
+            if (damage > Mana)
+            {
+                throw new InvalidOperationException("Not enough mana to perform the magic attack.");
+            }
+
+            Mana -= damage;
+
+            return damage;
         }
 
-        public int MagicAttack(string spellName)
-
-
+        private int CalculateMagicDamage(string spellName)
         {
-            throw new NotImplementedException();
+            return 10;
         }
 
         public int PhysicalAttack()
         {
-            throw new NotImplementedException();
+            int damage = CalculatePhysicalDamage();
+
+            return damage;
+        }
+
+        private int CalculatePhysicalDamage()
+        {
+            return 15;
         }
     }
 }
