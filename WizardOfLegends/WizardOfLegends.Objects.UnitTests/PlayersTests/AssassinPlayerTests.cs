@@ -20,7 +20,7 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
         public void AddDamage_ValidDamage_ReducedHealth()
         {
             // Arrange
-            var expectedHealth = 99; 
+            var expectedHealth = 99;
 
             // Act
             _sut.AddDamage(1);
@@ -28,6 +28,32 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
 
             // Assert
             Assert.Equal(expectedHealth, actualHealth);
+        }
+
+        [Fact]
+        public void PhysicalAttack_Should_Return_Positive_Damage()
+        {
+            // Arrange
+            var WizardPlayer = new WarriorPlayer();
+
+            // Act
+            var damageDealt = WizardPlayer.PhysicalAttack();
+
+            // Assert
+            Assert.True(damageDealt >= 0, "Damage should not be negative.");
+        }
+
+        public static int MagicAttack(string spellName)
+        {
+            int damage = 10;
+
+            switch (spellName)
+            {
+                case "Fireball":
+                    damage = 10;
+                    break;
+
+            }   
         }
     }
 }

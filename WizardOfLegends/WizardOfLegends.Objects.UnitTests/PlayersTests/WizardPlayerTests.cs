@@ -44,5 +44,19 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
             // Assert
             Assert.True(damageDealt >= 0, "Damage should not be negative.");
         }
+
+        public static int MagicAttack(string spellName)
+        {
+            int damage = 10;
+
+            switch (spellName)
+            {
+                case "Fireball":
+                    damage = 20;
+                    break;
+            }
+
+            return damage;
+        }
     }
 }
