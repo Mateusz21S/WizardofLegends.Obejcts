@@ -13,9 +13,9 @@ namespace WizardOfLegends.Objects.Players{
         public int Health
         {
             get => _health;
-            set => _health = 100;
+            set => _health = value;
         }
-
+     
         public int MaxMana => 20;
 
         public int Mana { get; set; } = 5;

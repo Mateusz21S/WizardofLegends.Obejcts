@@ -32,4 +32,10 @@ public interface IPlayer
     /// </summary>
     /// <returns></returns>
     public int MagicAttack(string spellName);
+
+    /// <summary>
+    /// To ma drukować informacje o graczu
+    /// imie health mana
+    /// </summary>
+    public void PrintInfo();
 }

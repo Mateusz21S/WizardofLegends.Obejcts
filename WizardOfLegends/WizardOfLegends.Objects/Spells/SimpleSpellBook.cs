@@ -33,16 +33,14 @@ public class SimpleSpellBook : ISpellBook
     {
         Spells.Remove(spell);
     }
-
-
+    
     public int CastSpell(string name, int rnd)
     {
-
+        //todo: sprawdzić czy czar istenije 
+        //jak istnieje to rzucić czar
+        //i policzyć obrażenia
      
             throw new NotImplementedException();
-     
-
-
     }
 
     public int CastSpell(int rnd)

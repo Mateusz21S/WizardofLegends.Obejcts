@@ -23,6 +23,8 @@ namespace WizardOfLegends.Objects.Players{
         public IWeapon Weapon { get; set; } = new KnifeWeapon();
         public ISpellBook SpellBook { get; set; } = new SimpleSpellBook();
 
+        public IPrinter Printer { get; set; } = new ConsolePrinter();
+
         public int AddDamage(int damage)
         {
             if (damage < 0)
@@ -42,6 +44,8 @@ namespace WizardOfLegends.Objects.Players{
 
         public int MagicAttack(string spellName)
         {
+            //tu trzeba sprawdzić czy czar istnieje
+            //i czy ma tyle many
             int damage = CalculateMagicDamage(spellName);
 
             if (damage > Mana)
@@ -63,6 +67,8 @@ namespace WizardOfLegends.Objects.Players{
         public int PhysicalAttack()
         {
             int damage = CalculatePhysicalDamage();
+
+            Printer.PrintInfo($"Physical attack with {Weapon.Name} deals {damage} damage.");
 
             return damage;
         }
