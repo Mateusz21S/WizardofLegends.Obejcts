@@ -10,6 +10,12 @@ namespace WizardOfLegends.Objects.Players{
         public int MaxHealth => 100;
 
         private int _health;
+
+        public WizardPlayer(string name)
+        {
+            Name = name;
+        }
+
         public int Health
         {
             get => _health;
@@ -67,6 +73,11 @@ namespace WizardOfLegends.Objects.Players{
         private int CalculatePhysicalDamage()
         {
             return 15;
+        }
+
+        public void PrintInfo()
+        {
+           
         }
     }
 }

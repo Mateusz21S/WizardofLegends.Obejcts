@@ -18,4 +18,9 @@ public class MagicArrowSpell : ISpell
     {
         return Power + random * 2;
     }
+
+    public void PrintInfo()
+    {
+
+    }
 }

@@ -19,4 +19,9 @@ public class LightningSpell : ISpell
     {
         return Power + random * 2;
     }
+
+    public void PrintInfo()
+    {
+
+    }
 }

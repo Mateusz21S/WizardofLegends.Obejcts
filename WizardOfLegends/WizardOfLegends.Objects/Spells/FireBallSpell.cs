@@ -20,4 +20,9 @@ public class FireBallSpell : ISpell
     {
         return Power + random * 2;
     }
+
+    public void PrintInfo()
+    {
+
+    }
 }

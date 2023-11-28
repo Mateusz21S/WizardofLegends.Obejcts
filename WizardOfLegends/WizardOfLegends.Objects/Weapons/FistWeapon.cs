@@ -25,4 +25,5 @@ public class FistWeapon : IWeapon
     {
         Console.WriteLine($"Fist has {Durability} durability points");
     }
+
 }
