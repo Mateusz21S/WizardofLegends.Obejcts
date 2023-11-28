@@ -1,5 +1,4 @@
-
-namespace WizardOfLegends.Objects.Spells;
+namespace WizardOfLegends.Objects.Magic.Spells;
 public class LightningSpell : ISpell
 {
     public string Name { get; }

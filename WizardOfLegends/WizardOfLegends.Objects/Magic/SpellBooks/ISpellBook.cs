@@ -1,4 +1,6 @@
-﻿namespace WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.Spells;
+
+namespace WizardOfLegends.Objects.Magic.SpellBooks;
 
 public interface ISpellBook
 {
@@ -10,11 +12,14 @@ public interface ISpellBook
     void AddSpell(ISpell spell);
 
     bool HasSpell(string name);
-    int CastSpell(string name, int rnd);
-
-    int CastSpell(int rnd);
+    int CastSpell(string name);
 
     void PrintInfo();
     void RemoveSpell(ISpell spell);
     int CastSpell(string name, object rnd);
+
+    int MaxRnd { get; set; }
+    int MinRnd { get; set; }
+    int SpellAddPower { get; set; }
+
 }

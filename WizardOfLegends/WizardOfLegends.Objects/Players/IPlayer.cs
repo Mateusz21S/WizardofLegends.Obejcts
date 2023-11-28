@@ -1,4 +1,4 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.SpellBooks;
 using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players;

@@ -1,7 +1,8 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.SpellBooks;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Players{
+namespace WizardOfLegends.Objects.Players
+{
     public class WizardPlayer : IPlayer
     {
         public Guid Id { get; set; }

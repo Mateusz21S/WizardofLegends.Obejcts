@@ -1,14 +1,22 @@
-namespace WizardOfLegends.Objects.Spells;
-public class ProfessionalSpellBook : ISpellBook
+using WizardOfLegends.Objects.Magic.Spells;
+
+namespace WizardOfLegends.Objects.Magic.SpellBooks;
+public class ExpertSpellBook : ISpellBook
 {
-    public class ProfessionalSpellBook : ISpellBook
+    public class ExpertSpellBook : ISpellBook
     {
-        public string Name { get; } = "Professional Spell Book";
-        public int SpellCount { get; private set; } = 5;
+
+        private IPrinter _printer;
+
+        public string Name { get; } = "Expert Spell Book";
+        public int SpellCount { get; private set; } = 8;
         public List<ISpell> Spells { get; }
 
-        public ProfessionalSpellBook()
+
+
+        public ExpertSpellBook(IPrinter printer)
         {
+            _printer = printer;
             Spells = new List<ISpell>();
         }
 
@@ -35,14 +43,14 @@ public class ProfessionalSpellBook : ISpellBook
 
             if (spell != null)
             {
-                int MagicDamage = rnd; 
-                Console.WriteLine($"Casting spell: {spell.Name}, Damage: MagicDamage}");
+                int MagicDamage = rnd;
+                Console.WriteLine($"Casting spell: {spell.Name}, MagicDamage: {MagicDamage}");
                 return MagicDamage;
             }
             else
             {
                 Console.WriteLine($"Spell '{name}' not found in {Name} spell book.");
-                return 0; 
+                return 0;
             }
         }
 

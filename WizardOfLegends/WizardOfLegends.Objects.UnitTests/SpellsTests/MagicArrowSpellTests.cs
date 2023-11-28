@@ -1,8 +1,8 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.Spells;
 
 namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
 
-    public class MagicArrowSpellTests
+public class MagicArrowSpellTests
     {
         private readonly MagicArrowSpell _sut;
 

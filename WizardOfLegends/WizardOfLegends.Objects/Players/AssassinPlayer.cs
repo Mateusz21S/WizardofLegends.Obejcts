@@ -1,9 +1,10 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.SpellBooks;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Players{ 
+namespace WizardOfLegends.Objects.Players
+{
 
-   public class AssassinPlayer : IPlayer
+    public class AssassinPlayer : IPlayer
    {
         public Guid Id { get; set; }
         public string Name { get; set; }

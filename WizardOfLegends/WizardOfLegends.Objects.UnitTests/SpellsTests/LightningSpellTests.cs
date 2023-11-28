@@ -1,8 +1,8 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.Spells;
 
 namespace WizardOfLegends.Objects.UnitTests.SpellsTests;
 
-    public class LightningSpellTests
+public class LightningSpellTests
     {
         private readonly LightningSpell _sut;
 

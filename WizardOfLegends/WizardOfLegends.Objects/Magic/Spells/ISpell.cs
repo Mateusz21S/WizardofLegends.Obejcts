@@ -1,4 +1,4 @@
-﻿namespace WizardOfLegends.Objects.Spells;
+﻿namespace WizardOfLegends.Objects.Magic.Spells;
 
 public interface ISpell
 {

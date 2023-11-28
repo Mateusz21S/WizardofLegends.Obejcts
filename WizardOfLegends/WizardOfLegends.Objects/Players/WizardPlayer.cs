@@ -1,4 +1,5 @@
-﻿using WizardOfLegends.Objects.Spells;
+﻿using WizardOfLegends.Objects.Magic.SpellBooks;
+using WizardOfLegends.Objects.Spells.SpellBooks;
 using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players
@@ -12,13 +13,14 @@ namespace WizardOfLegends.Objects.Players
 
         private int _health;
 
-        public WarriorPlayer(string name)
-        {
+        private IPrinter _printer;
+        public WarriorPlayer(string name, IPrinter printer) {
             Name = name;
+            _printer = printer;
         }
 
-        public WarriorPlayer()
-        {
+        public WarriorPlayer(IPrinter printer) {
+            _printer = printer;
         }
 
         public int Health

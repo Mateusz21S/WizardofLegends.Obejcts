@@ -1,17 +1,18 @@
-namespace WizardOfLegends.Objects.Spells;
-public class MagicArrowSpell : ISpell
+﻿namespace WizardOfLegends.Objects.Magic.Spells;
+
+public class FireBallSpell : ISpell
 {
     public string Name { get; }
     public int Power { get; }
     public int ManaCost { get; }
-    public int MagicDamage { get; set; }
+    public int MagicDamage { get; set; } = 10;
     public int MaxDamage { get; set; }
 
-    public MagicArrowSpell()
+    public FireBallSpell()
     {
-        Name = "Magic Arrow";
-        Power = 20;
-        ManaCost = 25;
+        Name = "FireBall Base";
+        Power = 10;
+        ManaCost = 10;
     }
 
     public int Hit(int random)
