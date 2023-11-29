@@ -1,29 +1,22 @@
-﻿using WizardOfLegends.Objects.Magic.SpellBooks;
-using WizardOfLegends.Objects.Spells.SpellBooks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Players
+namespace WizardOfLegends.Objects.Enemies
 {
-    public class WarriorPlayer : IPlayer
+    public class SkeletonEnemies : IEnemies
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
 
-        public int MaxHealth => 100;
+        public int MaxHealth => 35;
 
         private int _health;
 
-        private IPrinter _printer;
-        public WarriorPlayer(string name, IPrinter printer) {
-            Name = name;
-            _printer = printer;
-        }
-
-        public WarriorPlayer(IPrinter printer) {
-            _printer = printer;
-        }
-
-        public WarriorPlayer(string name)
+        public SkeletonEnemies(string name)
         {
             Name = name;
         }
@@ -34,11 +27,22 @@ namespace WizardOfLegends.Objects.Players
             set => _health = value;
         }
 
-        public int MaxMana => 50;
+        private IPrinter _printer;
+        public SkeletonEnemies(string name, IPrinter printer)
+        {
+            Name = name;
+            _printer = printer;
+        }
+
+        public SkeletonEnemies(IPrinter printer)
+        {
+            _printer = printer;
+        }
+
+        public int MaxMana => 40;
 
         public int Mana { get; set; } = 5;
-        public IWeapon Weapon { get; set; } = new SwordWeapon();
-        public ISpellBook SpellBook { get; set; } = new SimpleSpellBook();
+        public IWeapon Weapon { get; set; } = new BowWeapon();
 
         public int AddDamage(int damage)
         {
@@ -56,24 +60,6 @@ namespace WizardOfLegends.Objects.Players
 
             return Health;
         }
-        public int MagicAttack(string spellName)
-        {
-            int damage = CalculateMagicDamage(spellName);
-
-            if (damage > Mana)
-            {
-                throw new InvalidOperationException("Not enough mana to perform the magic attack.");
-            }
-
-            Mana -= damage;
-
-            return damage;
-        }
-
-        private int CalculateMagicDamage(string spellName)
-        {
-            return 10;
-        }
 
         public int PhysicalAttack()
         {
@@ -84,14 +70,14 @@ namespace WizardOfLegends.Objects.Players
 
         private int CalculatePhysicalDamage()
         {
-            return 15;
+            return 20;
         }
 
         public void PrintInfo()
         {
             if (_printer != null)
             {
-                _printer.Print($"Warrior Player Information:");
+                _printer.Print($"Skeleton Enemy Information:");
                 _printer.Print($"ID: {Id}");
                 _printer.Print($"Name: {Name}");
                 _printer.Print($"Health: {_health}/{MaxHealth}");
@@ -110,5 +96,3 @@ namespace WizardOfLegends.Objects.Players
 
     }
 }
-
-
