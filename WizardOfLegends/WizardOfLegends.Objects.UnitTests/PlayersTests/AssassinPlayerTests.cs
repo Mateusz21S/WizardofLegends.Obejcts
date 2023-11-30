@@ -54,6 +54,8 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
                     break;
 
             }   
+
+            return 0;
         }
     }
 }

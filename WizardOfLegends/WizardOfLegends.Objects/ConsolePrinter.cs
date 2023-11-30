@@ -4,13 +4,8 @@
     {
         public void Print(string v)
         {
-            throw new NotImplementedException();
+            Console.WriteLine(v);
         }
-
-        public void PrintInfo(string message) {
-            Console.WriteLine(message);
-
-            
-        }
+       
     }
 }

@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WizardOfLegends.Objects.Magic.SpellBooks;
+using WizardOfLegends.Objects.Players;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Enemies
+namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 {
-    public class ZombieEnemies : IEnemies
+    public class SpiderEnemies : IEnemies
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
 
-        public int MaxHealth => 75;
+        public int MaxHealth => 40;
 
         private int _health;
 
-        public ZombieEnemies(string name)
+        public SpiderEnemies(string name)
         {
             Name = name;
         }
@@ -28,18 +30,18 @@ namespace WizardOfLegends.Objects.Enemies
         }
 
         private IPrinter _printer;
-        public ZombieEnemies(string name, IPrinter printer)
+        public SpiderEnemies(string name, IPrinter printer)
         {
             Name = name;
             _printer = printer;
         }
 
-        public ZombieEnemies(IPrinter printer)
+        public SpiderEnemies(IPrinter printer)
         {
             _printer = printer;
         }
 
-        public int MaxMana => 15;
+        public int MaxMana => 30;
 
         public int Mana { get; set; } = 5;
         public IWeapon Weapon { get; set; } = new FistWeapon();
@@ -70,14 +72,14 @@ namespace WizardOfLegends.Objects.Enemies
 
         private int CalculatePhysicalDamage()
         {
-            return 10;
+            return 15;
         }
 
         public void PrintInfo()
         {
             if (_printer != null)
             {
-                _printer.Print($"Zombie Enemy Information:");
+                _printer.Print($"Spider Enemy Information:");
                 _printer.Print($"ID: {Id}");
                 _printer.Print($"Name: {Name}");
                 _printer.Print($"Health: {_health}/{MaxHealth}");
@@ -93,9 +95,6 @@ namespace WizardOfLegends.Objects.Enemies
                 Console.WriteLine("Printer is not initialized. Cannot print information.");
             }
         }
-
-
-
 
     }
 }

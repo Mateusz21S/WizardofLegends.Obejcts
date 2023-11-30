@@ -10,10 +10,10 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
     public class WizardPlayerTests
     {
         private WizardPlayer _sut;
-
+        private readonly IPrinter _printer;
         public WizardPlayerTests()
         {
-            _sut = new WizardPlayer();
+            _sut = new WizardPlayer(_printer);
         }
 
         [Fact]
@@ -36,7 +36,7 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
         public void PhysicalAttack_Should_Return_Positive_Damage()
         {
             // Arrange
-            var WizardPlayer = new WizardPlayer();
+            var WizardPlayer = new WizardPlayer(_printer);
 
             // Act
             var damageDealt = WizardPlayer.PhysicalAttack();

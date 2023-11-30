@@ -66,7 +66,7 @@ public class SimpleSpellBook : ISpellBook
 
     public void PrintInfo()
     {
-        priter($"Spell Book: {Name}, Spell Count: {Spells.Count}");
+        _printer.Print($"Spell Book: {Name}, Spell Count: {Spells.Count}");
         foreach (var spell in Spells)
         {
             Console.WriteLine($" - {spell.Name}");

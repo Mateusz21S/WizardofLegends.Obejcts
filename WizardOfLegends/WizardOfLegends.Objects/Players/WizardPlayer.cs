@@ -40,7 +40,7 @@ namespace WizardOfLegends.Objects.Players
 
         public int Mana { get; set; } = 5;
         public IWeapon Weapon { get; set; } = new FistWeapon();
-        public ISpellBook SpellBook { get; set; } = new SimpleSpellBook();
+        public ISpellBook SpellBook { get; set; } 
 
         public int AddDamage(int damage)
         {

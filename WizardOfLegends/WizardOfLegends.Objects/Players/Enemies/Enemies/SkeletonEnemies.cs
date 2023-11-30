@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WizardOfLegends.Objects.Magic.SpellBooks;
-using WizardOfLegends.Objects.Players;
 using WizardOfLegends.Objects.Weapons;
 
-namespace WizardOfLegends.Objects.Enemies
+namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 {
-    public class SpiderEnemies : IEnemies
+    public class SkeletonEnemies : IEnemies
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
 
-        public int MaxHealth => 40;
+        public int MaxHealth => 35;
 
         private int _health;
 
-        public SpiderEnemies(string name)
+        public SkeletonEnemies(string name)
         {
             Name = name;
         }
@@ -30,21 +28,21 @@ namespace WizardOfLegends.Objects.Enemies
         }
 
         private IPrinter _printer;
-        public SpiderEnemies(string name, IPrinter printer)
+        public SkeletonEnemies(string name, IPrinter printer)
         {
             Name = name;
             _printer = printer;
         }
 
-        public SpiderEnemies(IPrinter printer)
+        public SkeletonEnemies(IPrinter printer)
         {
             _printer = printer;
         }
 
-        public int MaxMana => 30;
+        public int MaxMana => 40;
 
         public int Mana { get; set; } = 5;
-        public IWeapon Weapon { get; set; } = new FistWeapon();
+        public IWeapon Weapon { get; set; } = new BowWeapon();
 
         public int AddDamage(int damage)
         {
@@ -72,14 +70,14 @@ namespace WizardOfLegends.Objects.Enemies
 
         private int CalculatePhysicalDamage()
         {
-            return 15;
+            return 20;
         }
 
         public void PrintInfo()
         {
             if (_printer != null)
             {
-                _printer.Print($"Spider Enemy Information:");
+                _printer.Print($"Skeleton Enemy Information:");
                 _printer.Print($"ID: {Id}");
                 _printer.Print($"Name: {Name}");
                 _printer.Print($"Health: {_health}/{MaxHealth}");
