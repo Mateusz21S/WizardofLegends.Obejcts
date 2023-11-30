@@ -1,4 +1,5 @@
-﻿namespace WizardOfLegends.Objects.Weapons;
+﻿
+namespace WizardOfLegends.Objects.Weapons;
 
 public class WarHammerWeapon : IWeapon
 {
@@ -26,7 +27,12 @@ public class WarHammerWeapon : IWeapon
 
     public void PrintInfo()
     {
-        Console.WriteLine($"War Hammer has {Durability} durability points");
-        Console.WriteLine(IsBroken() ? "War Hammer is broken" : "War Hammer is not broken");
+        printer($"War Hammer has {Durability} durability points");
+        printer(IsBroken() ? "War Hammer is broken" : "War Hammer is not broken");
+    }
+
+    private void printer(string v)
+    {
+        throw new NotImplementedException();
     }
 }

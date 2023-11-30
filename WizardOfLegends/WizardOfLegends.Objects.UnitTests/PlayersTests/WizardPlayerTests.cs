@@ -36,7 +36,7 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
         public void PhysicalAttack_Should_Return_Positive_Damage()
         {
             // Arrange
-            var WizardPlayer = new WarriorPlayer();
+            var WizardPlayer = new WizardPlayer();
 
             // Act
             var damageDealt = WizardPlayer.PhysicalAttack();

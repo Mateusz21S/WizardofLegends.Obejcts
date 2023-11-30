@@ -28,6 +28,10 @@ namespace WizardOfLegends.Objects.Players
             Name = name;
         }
 
+        public WarriorPlayer()
+        {
+        }
+
         public int Health
         {
             get => _health;

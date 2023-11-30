@@ -1,3 +1,4 @@
+
 namespace WizardOfLegends.Objects.Weapons;
 public class KnifeWeapon : IWeapon
 {
@@ -22,7 +23,11 @@ public class KnifeWeapon : IWeapon
 
     public void PrintInfo()
     {
-        Console.WriteLine($"Knife has {Durability} durability points");
+        printer($"Knife has {Durability} durability points");
     }
 
+    private void printer(string v)
+    {
+        throw new NotImplementedException();
+    }
 }

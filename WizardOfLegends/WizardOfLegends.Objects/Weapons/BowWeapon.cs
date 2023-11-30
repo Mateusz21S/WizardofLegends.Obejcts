@@ -29,8 +29,12 @@ namespace WizardOfLegends.Objects.Weapons
 
         public void PrintInfo()
         {
-            Console.WriteLine($"Pistol has {Durability} durability points");
+            printer($"Pistol has {Durability} durability points");
         }
 
+        private void printer(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

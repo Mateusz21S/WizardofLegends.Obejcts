@@ -34,10 +34,10 @@ namespace WizardOfLegends.Objects.UnitTests.PlayersTests
         public void PhysicalAttack_Should_Return_Positive_Damage()
         {
             // Arrange
-            var WizardPlayer = new WarriorPlayer();
+            var AssassinPlayer = new AssassinPlayer();
 
             // Act
-            var damageDealt = WizardPlayer.PhysicalAttack();
+            var damageDealt = AssassinPlayer.PhysicalAttack();
 
             // Assert
             Assert.True(damageDealt >= 0, "Damage should not be negative.");

@@ -24,12 +24,12 @@ public class ProfessionalSpellBook : ISpellBook
     {
         if (Spells.Count >= SpellCount)
         {
-            Console.WriteLine($"Cannot add more spells to {Name}. Maximum spell count ({SpellCount}) reached.");
+            printer($"Cannot add more spells to {Name}. Maximum spell count ({SpellCount}) reached.");
             return;
         }
 
         Spells.Add(spell);
-        Console.WriteLine($"{spell.Name} added to {Name} spell book.");
+        printer($"{spell.Name} added to {Name} spell book.");
     }
 
     public bool HasSpell(string name)
@@ -52,12 +52,12 @@ public class ProfessionalSpellBook : ISpellBook
 
             int MagicDamage = spell.Power + random * SpellAddPower;
 
-            Console.WriteLine($"Casting spell: {spell.Name}, MagicDamage: {MagicDamage}");
+            printer($"Casting spell: {spell.Name}, MagicDamage: {MagicDamage}");
             return MagicDamage;
         }
 
 
-        Console.WriteLine($"Spell '{name}' not found in {Name} spell book.");
+        printer($"Spell '{name}' not found in {Name} spell book.");
         return 0;
     }
 
@@ -68,6 +68,11 @@ public class ProfessionalSpellBook : ISpellBook
         {
             Console.WriteLine($" - {spell.Name}");
         }
+    }
+
+    private void printer(string v)
+    {
+        throw new NotImplementedException();
     }
 
     public int CastSpell(string name, object rnd)

@@ -1,4 +1,5 @@
-﻿namespace WizardOfLegends.Objects.Weapons;
+﻿
+namespace WizardOfLegends.Objects.Weapons;
 
 public class SwordWeapon : IWeapon
 {
@@ -18,8 +19,13 @@ public class SwordWeapon : IWeapon
 
     public void PrintInfo()
     {
-        Console.WriteLine($"Sword has {Durability} durability points");
-        Console.WriteLine(IsBroken() ? "Sword is broken" : "Sword is not broken");
+        printer($"Sword has {Durability} durability points");
+        printer(IsBroken() ? "Sword is broken" : "Sword is not broken");
+    }
+
+    private void printer(string v)
+    {
+        throw new NotImplementedException();
     }
 
     public int Hit(int random)

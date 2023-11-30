@@ -4,7 +4,7 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players
 {
-    public class WarriorPlayer : IPlayer
+    public class WizardPlayer : IPlayer
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -13,14 +13,9 @@ namespace WizardOfLegends.Objects.Players
 
         private int _health;
 
-        private IPrinter _printer;
-        public WarriorPlayer(string name, IPrinter printer) {
+        public WizardPlayer(string name)
+        {
             Name = name;
-            _printer = printer;
-        }
-
-        public WarriorPlayer(IPrinter printer) {
-            _printer = printer;
         }
 
         public int Health
@@ -29,10 +24,22 @@ namespace WizardOfLegends.Objects.Players
             set => _health = value;
         }
 
-        public int MaxMana => 50;
+        private IPrinter _printer;
+        public WizardPlayer(string name, IPrinter printer)
+        {
+            Name = name;
+            _printer = printer;
+        }
+
+        public WizardPlayer(IPrinter printer)
+        {
+            _printer = printer;
+        }
+
+        public int MaxMana => 20;
 
         public int Mana { get; set; } = 5;
-        public IWeapon Weapon { get; set; } = new SwordWeapon();
+        public IWeapon Weapon { get; set; } = new FistWeapon();
         public ISpellBook SpellBook { get; set; } = new SimpleSpellBook();
 
         public int AddDamage(int damage)
@@ -84,9 +91,24 @@ namespace WizardOfLegends.Objects.Players
 
         public void PrintInfo()
         {
-            
+            if (_printer != null)
+            {
+                _printer.Print($"Wizard Player Information:");
+                _printer.Print($"ID: {Id}");
+                _printer.Print($"Name: {Name}");
+                _printer.Print($"Health: {_health}/{MaxHealth}");
+                _printer.Print($"Mana: {Mana}/{MaxMana}");
+
+                if (Weapon != null)
+                {
+                    _printer.Print($"Weapon: {Weapon.GetType().Name}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Printer is not initialized. Cannot print information.");
+            }
         }
+
     }
 }
-
-

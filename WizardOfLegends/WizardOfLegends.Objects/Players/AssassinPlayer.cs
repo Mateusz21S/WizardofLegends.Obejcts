@@ -37,6 +37,10 @@ namespace WizardOfLegends.Objects.Players
             _printer = printer;
         }
 
+        public AssassinPlayer()
+        {
+        }
+
         public int MaxMana => 30;
 
         public int Mana { get; set; } = 5;
@@ -64,8 +68,6 @@ namespace WizardOfLegends.Objects.Players
 
         public int MagicAttack(string spellName)
         {
-            //tu trzeba sprawdzić czy czar istnieje
-            //i czy ma tyle many
             int damage = CalculateMagicDamage(spellName);
 
             if (damage > Mana)

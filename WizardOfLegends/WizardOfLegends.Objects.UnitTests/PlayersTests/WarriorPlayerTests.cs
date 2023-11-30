@@ -35,10 +35,10 @@ public class WarriorPlayerTests
     public void PhysicalAttack_Should_Return_Positive_Damage()
     {
         // Arrange
-        var WizardPlayer = new WarriorPlayer();
+        var WarriorPlayer = new WarriorPlayer();
 
         // Act
-        var damageDealt = WizardPlayer.PhysicalAttack();
+        var damageDealt = WarriorPlayer.PhysicalAttack();
 
         // Assert
         Assert.True(damageDealt >= 0, "Damage should not be negative.");

@@ -1,4 +1,5 @@
-﻿namespace WizardOfLegends.Objects.Weapons;
+﻿
+namespace WizardOfLegends.Objects.Weapons;
 
 public class FistWeapon : IWeapon
 {
@@ -23,7 +24,11 @@ public class FistWeapon : IWeapon
 
     public void PrintInfo()
     {
-        Console.WriteLine($"Fist has {Durability} durability points");
+        printer($"Fist has {Durability} durability points");
     }
 
+    private void printer(string v)
+    {
+        throw new NotImplementedException();
+    }
 }
