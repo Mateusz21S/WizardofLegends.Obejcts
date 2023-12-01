@@ -9,7 +9,7 @@ using WizardOfLegends.Objects.Weapons;
 
 namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 {
-    public class SpiderEnemies : IEnemies
+    public class SpiderEnemies : IPlayer
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -45,6 +45,7 @@ namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 
         public int Mana { get; set; } = 5;
         public IWeapon Weapon { get; set; } = new FistWeapon();
+        public ISpellBook SpellBook { get; set; }
 
         public int AddDamage(int damage)
         {
@@ -96,5 +97,9 @@ namespace WizardOfLegends.Objects.Players.Enemies.Enemies
             }
         }
 
+        public int MagicAttack(string spellName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

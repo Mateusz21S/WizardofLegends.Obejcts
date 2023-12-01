@@ -10,7 +10,7 @@ namespace WizardOfLegends.Objects
 {
     public static class EnemiesFactory
     {
-        public static IEnemies BuildEnemies(EnemiesType enemiesType, string name)
+        public static IPlayer BuildEnemies(EnemiesType enemiesType, string name)
         {
             switch (enemiesType)
             {

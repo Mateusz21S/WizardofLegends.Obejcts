@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WizardOfLegends.Objects.Weapons;
+using WizardOfLegends.Objects.Magic.SpellBooks;
+using WizardOfLegends.Objects.Players;
 
 namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 {
-    public class ZombieEnemies : IEnemies
+    public class ZombieEnemies : IPlayer
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -43,6 +45,7 @@ namespace WizardOfLegends.Objects.Players.Enemies.Enemies
 
         public int Mana { get; set; } = 5;
         public IWeapon Weapon { get; set; } = new FistWeapon();
+        public ISpellBook SpellBook { get; set; }
 
         public int AddDamage(int damage)
         {
@@ -94,8 +97,9 @@ namespace WizardOfLegends.Objects.Players.Enemies.Enemies
             }
         }
 
-
-
-
+        public int MagicAttack(string spellName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -2,29 +2,35 @@
 
 
 var printer = new ConsolePrinter();
+var player = new Player();
 
-Console.WriteLine("1. Create player"); //potem pyta sie o imie i typ postaci
+Console.WriteLine("1. Create player"); 
 Console.WriteLine("2. Print player info");
 Console.WriteLine("3. Exit");
 
-ConsoleKeyInfo keyInfo = new ConsoleKeyInfo();
+ConsoleKeyInfo keyInfo;
 
-while (keyInfo.Key != ConsoleKey.Escape)
+do
 {
-     switch (keyInfo.Key)
+    keyInfo = Console.ReadKey(true);
+
+    switch (keyInfo.Key)
     {
         case ConsoleKey.D1:
-            printer.Print("wcisłeś 1");
+            Console.WriteLine("Enter player name: ");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("Enter player type: ");
+            string playerType = Console.ReadLine();
+            player.CreatePlayer(playerName, playerType);
             break;
         case ConsoleKey.D2:
-            printer.Print("wcisłeś 2");
+            printer.Print(player.GetPlayerInfo());
             break;
         case ConsoleKey.D3:
             return;
-   }
+    }
 
-    keyInfo = Console.ReadKey(true);
-}   
+} while (keyInfo.Key != ConsoleKey.Escape);
 
 printer.Print("Koniec programu");
 
