@@ -2,9 +2,14 @@
 
 namespace WizardOfLegends.Objects;
 
-public static class PlayerFactory
+public class PlayerFactory
 {
-    public static IPlayer BuildPlayer(PlayerType playerType, string name, IPrinter printer)
+    private readonly IPrinter _printer;
+    public PlayerFactory(IPrinter printer) {
+        _printer = printer;
+    }
+
+    public  IPlayer BuildPlayer(PlayerType playerType, string name)
     {
         switch (playerType)
         {
@@ -13,7 +18,7 @@ public static class PlayerFactory
             case PlayerType.Wizard:
                 return new WizardPlayer(name);
             case PlayerType.Assassin:
-                return new AssassinPlayer(name, printer);
+                return new AssassinPlayer(name, _printer);
             default:
                 throw new ArgumentException("Invalid player type.", nameof(playerType));
         }
@@ -22,7 +27,7 @@ public static class PlayerFactory
 
 public enum PlayerType
 {
-    Warrior,
-    Wizard,
-    Assassin
+    Warrior =0 ,
+    Wizard =10 ,
+    Assassin =20
 }

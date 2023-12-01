@@ -8,9 +8,9 @@ using WizardOfLegends.Objects.Players.Enemies.Enemies;
 
 namespace WizardOfLegends.Objects
 {
-    public static class EnemiesFactory
+    public  class EnemiesFactory
     {
-        public static IPlayer BuildEnemies(EnemiesType enemiesType, string name)
+        public  IPlayer BuildEnemies(EnemiesType enemiesType, string name)
         {
             switch (enemiesType)
             {

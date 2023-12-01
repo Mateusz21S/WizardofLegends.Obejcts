@@ -2,7 +2,8 @@
 
 
 var printer = new ConsolePrinter();
-var player = new Player();
+var playerFactory = new PlayerFactory(printer);
+
 
 Console.WriteLine("1. Create player"); 
 Console.WriteLine("2. Print player info");
@@ -19,12 +20,19 @@ do
         case ConsoleKey.D1:
             Console.WriteLine("Enter player name: ");
             string playerName = Console.ReadLine();
+            
             Console.WriteLine("Enter player type: ");
-            string playerType = Console.ReadLine();
-            player.CreatePlayer(playerName, playerType);
+            foreach (var playerType in Enum.GetValues(typeof(PlayerType)))
+            {
+                Console.WriteLine($"{(int)playerType}. {playerType}");
+            }
+
+            int  selectedType = Convert.ToInt16(Console.ReadLine());
+            playerFactory.BuildPlayer((PlayerType)selectedType, playerName);
             break;
+
         case ConsoleKey.D2:
-            printer.Print(player.GetPlayerInfo());
+            
             break;
         case ConsoleKey.D3:
             return;
